@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<VBox fx:id="rootVBox" spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.project.serenity.controller.InvoiceController" style="-fx-background-color: white; -fx-padding: 20;">
+
+    <Label text="Payment Invoice" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+
+    <Separator />
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER_LEFT">
+        <Label text="Payment ID:" />
+        <Label fx:id="paymentIdLabel" />
+
+        <Label text="Paid Amount:" GridPane.rowIndex="1"/>
+        <Label fx:id="paidAmountLabel" GridPane.rowIndex="1"/>
+
+        <Label text="Pending Amount:" GridPane.rowIndex="2"/>
+        <Label fx:id="pendingAmountLabel" GridPane.rowIndex="2"/>
+
+        <Label text="Payment Status:" GridPane.rowIndex="3"/>
+        <Label fx:id="paymentStatusLabel" GridPane.rowIndex="3"/>
+
+        <Label text="Date &amp; Time:" GridPane.rowIndex="4"/>
+        <Label fx:id="dateTimeLabel" GridPane.rowIndex="4"/>
+    </GridPane>
+
+    <Separator />
+
+    <Label text="Thank you for your payment!" style="-fx-font-size: 16px; -fx-text-fill: #4CAF50;"/>
+
+    <Button text="Print Invoice" onAction="#printInvoice" style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+</VBox>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="maindashboardpane" prefHeight="519.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.serenity.controller.DashboardController">
+   <children>
+      <VBox prefHeight="519.0" prefWidth="162.0" style="-fx-background-color: #d6e6ec;">
+         <children>
+            <Label prefHeight="80.0" prefWidth="187.0" style="-fx-background-color: white;" text="Serenity">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="379.0" prefWidth="162.0">
+               <children>
+                  <JFXButton fx:id="therapistbutton" onAction="#therapistsclick" prefHeight="63.0" prefWidth="162.0" text="Therapists">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="programbutton" onAction="#programsclick" prefHeight="63.0" prefWidth="162.0" text="Progrms">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="patientbutton" onAction="#patientsclick" prefHeight="63.0" prefWidth="162.0" text="Patients">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="sessionbutton" onAction="#sessionsclick" prefHeight="63.0" prefWidth="162.0" text="Sessions">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="paymentbutton" onAction="#paymentsclick" prefHeight="63.0" prefWidth="162.0" text="Payments">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <JFXButton fx:id="logoutbutton" onAction="#onlogout" prefHeight="60.0" prefWidth="163.0" text="Log Out">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="dashboardpane" layoutX="162.0" prefHeight="519.0" prefWidth="547.0">
+         <children>
+            <Label layoutX="62.0" layoutY="189.0" text="Welcome!">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

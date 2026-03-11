@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="519.0" prefWidth="547.3333333333334" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.serenity.controller.PaymentController">
+   <children>
+      <Label layoutX="208.0" text="Payments">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <TableView fx:id="paymentTable" layoutY="55.0" onMouseClicked="#OnTableClick" prefHeight="273.0" prefWidth="547.0">
+        <columns>
+          <TableColumn fx:id="paymentID" prefWidth="43.999998688697815" text="ID" />
+          <TableColumn fx:id="paidAmount" prefWidth="173.33330917358398" text="Paid Amount" />
+            <TableColumn fx:id="paymentStatus" prefWidth="180.66664123535156" text="Payment Status" />
+            <TableColumn fx:id="pendingAmount" prefWidth="149.33334350585938" text="Pending Amount" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="paidamountField" layoutX="14.0" layoutY="348.0" promptText="Paid Amount" />
+      <JFXTextField fx:id="paymentstatusField" layoutX="14.0" layoutY="409.0" promptText="Payment Status" />
+      <JFXTextField fx:id="pendingamountField" layoutX="14.0" layoutY="467.0" promptText="Pending Amount" />
+      <Label fx:id="paidamountError" layoutX="15.0" layoutY="382.0" prefHeight="17.0" prefWidth="163.0" textFill="RED" />
+      <Label fx:id="paymentstatusError" layoutX="15.0" layoutY="441.0" prefHeight="17.0" prefWidth="163.0" textFill="RED" />
+      <Label fx:id="pendingamountError" layoutX="15.0" layoutY="496.0" prefHeight="17.0" prefWidth="163.0" textFill="RED" />
+      <Button fx:id="payupdateButton" layoutX="199.0" layoutY="479.0" mnemonicParsing="false" onAction="#BtnUpdateOnAction" prefHeight="25.0" prefWidth="100.0" text="Update" />
+      <Button fx:id="generateinvoiceButton" layoutX="403.0" layoutY="379.0" mnemonicParsing="false" onAction="#BtnGenerateOnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-background-color: black;" text="Generate Invoice" textFill="WHITE" />
+      <Button fx:id="generatereportButton" layoutX="379.0" layoutY="451.0" mnemonicParsing="false" onAction="#BtnReportOnAction" prefHeight="55.0" prefWidth="153.0" style="-fx-background-color: black;" text="Generate financial reports" textFill="WHITE" />
+      <Button fx:id="payclearButton" layoutX="202.0" layoutY="428.0" mnemonicParsing="false" onAction="#BtnClearOnAction" prefHeight="25.0" prefWidth="105.0" text="Clear Form" />
+   </children>
+</AnchorPane>
